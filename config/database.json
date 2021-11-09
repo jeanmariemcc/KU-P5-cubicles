@@ -1,9 +1,1 @@
-[
-	{
-		"id": 844,
-		"name": "Sassy Cat",
-		"description": "opopo",
-		"imgURL": "https://www.whitealpaca.com.au/wp-content/uploads/2020/11/Rubix-Rubicks-Rubiks-Puzzle-Cube-1-1-scaled.jpg",
-		"difficulty": "1"
-	}
-]
+[{"id":844,"name":"Sassy Cat","description":"opopo","imgURL":"https://www.whitealpaca.com.au/wp-content/uploads/2020/11/Rubix-Rubicks-Rubiks-Puzzle-Cube-1-1-scaled.jpg","difficulty":"1"},{"id":852,"name":"Cool cube","description":"Best cube for your brain","imgURL":"https://i5.walmartimages.com/asr/1a54e44c-9916-4cca-8788-d30bb5fbe65b_1.542095febbdccddf0de89cbf5fc33613.jpeg","difficulty":"4"},{"id":1414,"name":"Blind man's Cube","description":"Keeps you busy even when the lights are out!","imgURL":"https://cdn.instructables.com/ORIG/FNU/MPLY/F9N26JSG/FNUMPLYF9N26JSG.jpg?frame=1&width=2100","difficulty":"4"}]

@@ -1,22 +1,20 @@
 const fs = require("fs");
 
-// const qs = require("querystring");
-// const formidable = require("formidable");
 const Cube = require("../models/Cube");
 const Accessories = require("../models/Accessories");
 
 module.exports = function (req, res) {
 	let fields = req.body;
 	console.log(fields);
-	new Cube({
+	new Accessories({
 		name: fields.name,
 		description: fields.description,
 		imgURL: fields.imgURL,
-		difficulty: fields.difficulty,
+		// difficulty: fields.difficulty,
 	})
 		.save()
-		.then((cube) => {
-			console.log(cube._id, cube.name);
+		.then((accessory) => {
+			console.log(accessory._id, accessory.name);
 		});
 
 	res.redirect("/");

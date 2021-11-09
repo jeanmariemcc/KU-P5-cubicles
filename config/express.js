@@ -1,12 +1,10 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
+// const mongoose = require("mongoose");
 
 module.exports = (app) => {
-	//TODO: Setup the body parser
-
-	app.use(bodyParser.urlencoded({ extended: true }));
-	//TODO: Setup the view engine
+	//Setup the view engine
 	app.engine(
 		".hbs",
 		handlebars({
@@ -16,7 +14,10 @@ module.exports = (app) => {
 
 	app.set("view engine", ".hbs");
 
-	//TODO: Setup the static files
+	//TODO: Setup the body parser
+	app.use(bodyParser.urlencoded({ extended: true }));
+
+	// Setup the static files
 	app.use(express.static("static"));
 	app.use("/static", express.static("static"));
 	app.use("/static", express.static(__dirname + "/static"));

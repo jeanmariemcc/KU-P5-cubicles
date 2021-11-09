@@ -1,0 +1,36 @@
+<div class="container">
+	<header>
+		<ul>
+			<li><img class="logo" src="/images/logo.png" /></li>
+			<li><a href="/">Browse</a></li>
+			<li><a href="/create/cube">Add a Cube</a></li>
+			<li><a href="/create/accessory">Create Accessory</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</header>
+	<main>
+		<h1>Attach a new accessory</h1>
+		<div class="form">
+			<h2>{{name}}</h2>
+			<img class="cube" src="{{imgURL}}" />
+			{{! cube id below }}
+			<form action="/attach/{{id}}" method="POST">
+				<label for="accessory">Accessories</label>
+				<select id="accessory" name="accessory">
+					{{#each accessories}}
+						{{! accessory id below because of context }}
+						<option value="{{id}}">{{name}}</option>
+					{{else}}
+						<option class="italic">This cube has all available
+							accessories so far or there is no available at
+							all...
+						</option>
+					{{/each}}
+				</select>
+				<input type="submit" value="Attach" />
+			</form>
+			<h2><a class="btn" href="/">Back</a></h2>
+		</div>
+	</main>
+</div>
+<footer>@Cubicle: Exercise for Express.js and Handlebars</footer>

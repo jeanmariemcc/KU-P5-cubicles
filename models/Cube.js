@@ -1,4 +1,19 @@
 const mongoose = require("mongoose");
+const Accessories = require("./Accessories");
+
+const cubeSchema = new mongoose.Schema({
+	name: { type: String, required: true },
+	description: { type: String, required: true },
+	imgURL: { type: String, required: true },
+	difficulty: { type: String, required: true },
+	accessories: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Accessories",
+		},
+	],
+});
+module.exports = mongoose.model("Cube", cubeSchema);
 
 // module.exports = class Cube {
 // 	constructor(name, description, imgURL, difficulty) {
