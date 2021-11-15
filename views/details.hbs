@@ -1,13 +1,4 @@
 <div class="container">
-	<header>
-		<ul>
-			<li><img class="logo" src="/images/logo.png" /></li>
-			<li><a href="/">Browse</a></li>
-			<li><a href="/create/cube">Add a Cube</a></li>
-			<li><a href="/create/accessory">Create Accessory</a></li>
-			<li><a href="/about">About</a></li>
-		</ul>
-	</header>
 	<main>
 		<h1>{{name}}</h1>
 		<img class="cube" src="{{imgURL}}" />
@@ -15,7 +6,14 @@
 			<p><span>Description:</span>
 				{{description}}</p>
 			<p><span>Difficulty level:</span>{{difficulty}}</p>
-			<h2><a class="btn" href="/">Back</a></h2>
+			<h2>
+				<a class="btn" href="/">Back</a>
+				{{#if loggedIn}}
+					<a class="btn" href="/edit/cube/:id">Edit</a>
+					<a class="btn" href="/delete/cube/:id">Delete</a>
+				{{/if}}
+
+			</h2>
 		</div>
 		<h2>Accessories</h2>
 		<div class="accessories">

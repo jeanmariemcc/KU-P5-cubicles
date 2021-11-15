@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
 const Accessories = require("./Accessories");
+const User = require("./User");
 
 const cubeSchema = new mongoose.Schema({
 	name: { type: String, required: true },
 	description: { type: String, required: true },
 	imgURL: { type: String, required: true },
 	difficulty: { type: String, required: true },
+	creatorID: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "User",
+		required: true,
+	},
 	accessories: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
